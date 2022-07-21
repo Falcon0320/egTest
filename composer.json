@@ -1,0 +1,15 @@
+{
+    "name": "jacques/jk_eg_test",
+    "description": "Energy Global Test Submission",
+    "autoload": {
+        "psr-4": {
+            "Jacques\\JkEgTest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jacques Knoetze"
+        }
+    ],
+    "require": {}
+}
