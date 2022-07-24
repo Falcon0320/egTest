@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace Jacques\JkEgTest;
 
-use Exception;
-
 class Math
 {
     public function calcDivisors(int $num): array
@@ -45,7 +43,7 @@ class Math
     {
         if ($num < 0 || $num > 12)
         {
-            throw new Exception('Incorrect value received: '.$num.' Enter a value between 0 and 12');
+            throw new InvalidNumberException('Incorrect value received: '.$num.' Enter a value between 0 and 12');
         }
 
         $result = $num;
@@ -76,7 +74,7 @@ class Math
     {
         $xml = '
             <?xml version="1.0" encoding="UTF-8"?>
-                <primeNumbers amount='.count($primes).'>
+                <primeNumbers amount="'.count($primes).'">
         ';
 
         if (!empty($primes))
@@ -97,6 +95,6 @@ class Math
         }
 
         $xml .= '</primeNumbers>';
-        return $xml;
+        return trim($xml);
     }
 }
