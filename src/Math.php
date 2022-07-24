@@ -11,7 +11,7 @@ class Math
     {
         if ($num === 0)
         {
-            throw new Exception('Incorrect value received: 0');
+            throw new InvalidNumberException('Incorrect value received: 0');
         }
 
         $num = abs($num);
